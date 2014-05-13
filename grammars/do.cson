@@ -8,7 +8,7 @@
 'name': 'do'
 'patterns': [
   {
-    'match': '(#|//).*$'
+    'match': '(\\*).*$'
     'name': 'comment.line.number-sign.do'
   }
   {
@@ -72,7 +72,7 @@
     'name': 'string.quoted.single.do'
   }
   {
-    'match': '\\b(true|false|null|this)\\b'
+    'match': '\\b(true|false|null|this|by)\\b'
     'name': 'constant.language.do'
   }
   {
