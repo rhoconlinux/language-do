@@ -8,7 +8,7 @@ This package adds **language support and syntax highlighting for [Stata](http://
 ## How to install it in Atom:
 You have to download or clone this repository, extract the content and copy the "`language-do`" folder in your `.atom/packages`. Restart Atom, and enjoy.  
 
-### Manual Install:  
+## Manual Install:  
 #### (Ninja-Install only for Gnu/Linux*):
 Open a terminal and paste this line to install the language in one command: 
 
