@@ -1,0 +1,26 @@
+{
+  "name": "language-do",
+  "version": "0.1.0",
+  "description": "Atom package for Stata do files",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rhoconlinux/do-language"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {},
+  "readme": "# language-do package\n\nLanguage support for do for the Atom Editor.\nPackage converted from TextMate bundle.\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/rhoconlinux/do-language/issues"
+  },
+  "homepage": "https://github.com/rhoconlinux/do-language",
+  "_id": "language-do@0.1.0",
+  "dist": {
+    "shasum": "23ab43d84c05b4073730e6f7158e647d1994ec72"
+  },
+  "_resolved": "/tmp/d-114412-27355-i5a8bg/package.tgz",
+  "_from": "/tmp/d-114412-27355-i5a8bg/package.tgz"
+}
