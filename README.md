@@ -32,9 +32,10 @@ Which is the proper way to install it and receive the updates automatically.
 
 
 ###### Changelog v 0.2:
->do.cson: added proper comment of "*" (fixed multiplication symbol)
-> do.cson: added foreach, by and mata differentiation
-> language.do: fixed warning after 'completions':[ 
+
+- do.cson: added proper comment of "*" (fixed multiplication symbol)
+- do.cson: added foreach, by and mata differentiation
+- language.do: fixed warning after 'completions':[ 
 
 
 ###### About the author:
