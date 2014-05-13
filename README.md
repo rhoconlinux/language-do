@@ -6,19 +6,26 @@ This package adds **language support and syntax highlighting for [Stata](http://
 
 
 ## How to install it in Atom:
-download or clone the repo and copy the "`language-do`" folder in your `.atom/packages`.  
+You have to download or clone this repository, extract the content and copy the "`language-do`" folder in your `.atom/packages`. Restart Atom, and enjoy.  
 
-### Ninja-Install for Linux:
+### Ninja-Install (only for Gnu/Linux):
 Open a terminal and paste this line to install the language in one command: 
 
 ```
 cd ~/.atom && wget https://github.com/rhoconlinux/language-do/archive/master.zip  && unzip master.zip && rm master.zip && cd language-do-master && mv language-do  ~/.atom/packages && rm -Rf ~/.atom/language-do-master && cd
 
 ```
+*(it might work in a mac too, cause it is bash, but I didn't tested)*
 
 ### note:
 Obviously when the package is accepted you may find it through **apm**, and you will be able to install it with the following command:
+
 `apm install language-do`
+
+
+- - -
+
+
 
 ###### Changelog v 0.2:
 >do.cson: added proper comment of "*" (fixed multiplication symbol)
