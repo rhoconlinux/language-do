@@ -1,0 +1,17 @@
+{
+  "name": "language-do",
+  "main": "./lib/language-do",
+  "version": "0.2.0",
+  "description": "Atom syntax package for Stata do files",
+  "activationEvents": ["language-do:toggle"],
+  "repository": "https://github.com/atom/language-do",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+  }
+}
+"bugs": {
+    "url": "https://github.com/rhoconlinux/do-language/issues"
+  },

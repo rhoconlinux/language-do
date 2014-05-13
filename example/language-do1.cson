@@ -1,0 +1,281 @@
+'.source.do':
+  'def':
+    'prefix': 'def'
+    'body': 'def ${1:defName}($2):\n\t$0'
+  'private data member':
+    'prefix': 'priv'
+    'body': 'private m${1:variableName} as ${2:type}$0'
+  'public data member':
+    'prefix': 'pub'
+    'body': 'public ${1:variableName} as ${2:type}$0'
+  'array':
+    'prefix': 'arr'
+    'body': '${1:arrayName} as (${2:elementType}) = array( $2, ${3:arrayLength} )$0'
+  'cast':
+    'prefix': 'c'
+    'body': 'cast( ${1:type}, ${2:$TM_SELECTED_TEXT} )$0'
+  'class':
+    'prefix': 'class'
+    'body': 'class ${1:name} ${2:(supers)}:\n\n\tdef constructor( ${3:arguments} ):\n\t\t$0'
+  'for loop':
+    'prefix': 'for'
+    'body': 'for ${1:iterator} in ${2:container}:\n\t$0'
+  'for-range (c-style) loop':
+    'prefix': 'forc'
+    'body': 'for ${1:iterator} in range(${2:end}, ${3:start}, ${4:step}):\n\t$0'
+  'for-range loop':
+    'prefix': 'forr'
+    'body': 'for ${1:iterator} in range(${2:length}):\n\t$0'
+  'interface':
+    'prefix': 'inter'
+    'body': 'interface ${1:name} ${2:(supers)}:\n\t$0'
+  'property':
+    'prefix': 'prop'
+    'body': '${1:dataMember} as ${2:type}\n${1/./\\u$0/} as ${2}:\n\tget:\n\t\t$3return ${1}\n\tset:\n\t\t$4${1} = value'
+  'raise':
+    'prefix': 'ra'
+    'body': 'raise Exception( ${1:Program made a boo-boo} )$0'
+  'singleton':
+    'prefix': 'singl'
+    'body': 'import Useful.Attributes from "Boo.Lang.Useful"\n\n[Singleton]\nclass ${1:name} ${2:(supers)}:\n\n\tdef constructor():\n\t\t$0'
+  'struct':
+    'prefix': 'struc'
+    'body': 'struct ${1:name} ${2:(supers)}:\n\n\tdef constructor( ${3:arguments} ):\n\t\t$0'
+  'try-ensure':
+    'prefix': 'ten'
+    'body': 'try:\n\t$1\nensure:\n\t$2'
+  'try-except-ensure':
+    'prefix': 'tee'
+    'body': 'try:\n\t$1\nexcept e as ${2:Exception}:\n\t$3\nensure:\n\t$4'
+  'try-except':
+    'prefix': 'tex'
+    'body': 'try:\n\t$1\nexcept e as ${2:Exception}\n\t$3'
+  'while loop':
+    'prefix': 'wh'
+    'body': 'while ${1:condition}:\n\t$0'
+  'while-break-unless loop':
+    'prefix': 'whbu'
+    'body': 'while true:\n\t$0\n\tbreak unless ${1:condition}'
+'.source.boo.unity':
+  'DragWindow':
+    'prefix': 'gdwin'
+    'body': 'GUI.DragWindow()'
+  'OnTriggerEnter':
+    'prefix': 'ote'
+    'body': 'def OnTriggerEnter( other as Collider ):\n\t$0'
+  'OnTriggerExit':
+    'prefix': 'ote'
+    'body': 'def OnTriggerExit( other as Collider ):\n\t$0'
+  'OnTriggerStay':
+    'prefix': 'ots'
+    'body': 'def OnTriggerStay( other as Collider ):\n\t$0'
+  'Screen.height':
+    'prefix': 'sh'
+    'body': 'Screen.height$0'
+  'Screen.width':
+    'prefix': 'sw'
+    'body': 'Screen.width$0'
+  'Area':
+    'prefix': 'gg'
+    'body': 'GUILayout.BeginArea( Rect( ${1:x}, ${2:y}, ${3:width}, ${4:height} ) )\n\n$0\n\nGUILayout.EndArea()'
+  'Box':
+    'prefix': 'gbox'
+    'body': 'GUILayout.Box( ${5:content} )$0'
+  'Button':
+    'prefix': 'gbut'
+    'body': 'GUILayout.Button( ${4:height} ), ${5:content} )$0'
+  'Group':
+    'prefix': 'gg'
+    'body': 'GUI.BeginGroup( Rect( ${1:x}, ${2:y}, ${3:width}, ${4:height} ) )\n\n$0\n\nGUI.EndGroup()'
+  'GuiContent:2':
+    'prefix': 'gc'
+    'body': 'GUIContent( ${1:text/image}, ${2:image/tooltip} )$0'
+  'GuiContent:3':
+    'prefix': 'gc'
+    'body': 'GUIContent( ${1:text}, ${2:image}, ${3:tooltip} )$0'
+  'GuiContent:1':
+    'prefix': 'gc'
+    'body': 'GUIContent( ${1:text/image/GUIContent} )$0'
+  'HorizontalArea':
+    'prefix': 'gg'
+    'body': 'GUILayout.BeginHorizontal()\n\n$0\n\nGUILayout.EndHorizontal()'
+  'HorizontalScrollbar':
+    'prefix': 'gscrol'
+    'body': 'GUILayout.HorizontalScrollbar( ${5:value}, ${6:barSize}, ${7:leftValue}, ${8:rightValue} )$0'
+  'HorizontalSlider':
+    'prefix': 'gslid'
+    'body': 'GUILayout.HorizontalSlider( ${5:value}, ${6:leftValue}, ${7:rightValue} )$0'
+  'Label':
+    'prefix': 'glab'
+    'body': 'GUILayout.Label( ${5:content} )$0'
+  'RepeatButton':
+    'prefix': 'grbut'
+    'body': 'GUILayout.RepeatButton( ${4:height} ), ${5:content} )$0'
+  'ScrollView:2':
+    'prefix': 'gscrolv'
+    'body': 'GUILayout.BeginScrollView( ${5:scrollPosition}, Rect( ${6:0}, ${7:0}, ${8:innerWidth}, ${9:innerHeight} )\n\n$0\n\nGUI.EndScrollView()'
+  'ScrollView:4':
+    'prefix': 'gscrolv'
+    'body': 'GUILayout.BeginScrollView( ${5:scrollPosition}, Rect( ${6:0}, ${7:0}, ${8:innerWidth}, ${9:innerHeight}, ${10:alwaysShowHorizontal}, ${11:alwaysShowVertical} )\n\n$0\n\nGUI.EndScrollView()'
+  'SelectionGrid':
+    'prefix': 'gsel'
+    'body': '${7} as (string) = ( ${1:"texts"} )\nGUILayout.Toolbar( ${6:selectedIndex}, ${7:contents}, ${8:xCount} )$0'
+  'TextArea:1':
+    'prefix': 'gtexa'
+    'body': 'GUILayout.TextArea( ${5:text} )$0'
+  'TextArea:2':
+    'prefix': 'gtexa'
+    'body': 'GUILayout.TextArea( ${5:text}, ${6:maxLength} )$0'
+  'TextField:1':
+    'prefix': 'gtex'
+    'body': 'GUILayout.TextField( ${5:text} )$0'
+  'TextField:2':
+    'prefix': 'gtex'
+    'body': 'GUILayout( ${5:text}, ${6:maxLength} )$0'
+  'Toggle':
+    'prefix': 'gtog'
+    'body': 'GUILayout.Toggle( ${5:enabled}, ${6:labelContent} )$0'
+  'Toolbar & contents':
+    'prefix': 'gtool'
+    'body': '${7} as (string) = ( ${1:"banana"} )\nGUILayout.Toolbar( ${6:selectedIndex}, ${7:contents} )$0'
+  'Toolbar':
+    'prefix': 'gtool'
+    'body': 'GUILayout.Toolbar( ${5:selectedIndex}, ${6:contents} )$0'
+  'VerticalArea':
+    'prefix': 'gg'
+    'body': 'GUILayout.BeginVertical()\n\n$0\n\nGUILayout.EndVertical()'
+  'VerticalScrollbar':
+    'prefix': 'gscrol'
+    'body': 'GUILayout.VerticalScrollbar( ${5:value}, ${6:barSize}, ${7:topValue}, ${8:bottomValue} )$0'
+  'VerticalSlider':
+    'prefix': 'gslid'
+    'body': 'GUILayout.VerticalSlider( ${5:value}, ${6:topValue}, ${7:bottomValue} )$0'
+  'Window & WindowFunction':
+    'prefix': 'gwin'
+    'body': 'GUILayout.Window( ${1:id}, Rect( ${2:x}, ${3:y}, ${4:width}, ${5:height} ), ${6}, ${7:titleContent} )\n\n$0def ${6:DrawWindow}( id as int ): # move me!'
+  'Window':
+    'prefix': 'gwin'
+    'body': 'GUILayout.Window( ${1:id}, Rect( ${2:x}, ${3:y}, ${4:width}, ${5:height} ), ${6:windowGUIFunction}, ${7:titleContent} )$0'
+  'GUI.changed':
+    'prefix': 'gcha'
+    'body': 'GUI.changed$0'
+  'GUI.skin':
+    'prefix': 'gski'
+    'body': 'GUI.skin = $0'
+  'GUI.tooltip':
+    'prefix': 'gtt'
+    'body': 'GUI.tooltip$0'
+  'OnApplicationPause':
+    'prefix': 'oap'
+    'body': 'def OnApplicationPause():\n\t$0'
+  'OnApplicationQuit':
+    'prefix': 'oaq'
+    'body': 'def OnApplicationQuit():\n\t$0'
+  'OnCollisionEnter':
+    'prefix': 'oce'
+    'body': 'def OnCollisionEnter( other as Collider ):\n\t$0'
+  'OnCollisionExit':
+    'prefix': 'oce'
+    'body': 'def OnCollisionExit( other as Collider ):\n\t$0'
+  'OnCollisionStay':
+    'prefix': 'ocs'
+    'body': 'def OnCollisionStay( other as Collider ):\n\t$0'
+  'OnConnectedToServer':
+    'prefix': 'ocs'
+    'body': 'def OnConnectedToServer():\n\t$0'
+  'OnDisconnectedFromServer':
+    'prefix': 'ods'
+    'body': 'def OnDisconnectedFromServer():\n\t$0'
+  'OnDrawGizmos':
+    'prefix': 'odg'
+    'body': 'def OnDrawGizmos():\n\t$0'
+  'OnDrawGizmosSelected':
+    'prefix': 'odgs'
+    'body': 'def OnDrawGizmosSelected():\n\t$0'
+  'OnFailedToConnect':
+    'prefix': 'ofc'
+    'body': 'def OnFailedToConnect():\n\t$0'
+  'OnFailedToConnectToMasterServer':
+    'prefix': 'ofcm'
+    'body': 'def OnFailedToConnectToMasterServer():\n\t$0'
+  'OnMouseDown':
+    'prefix': 'omd'
+    'body': 'def OnMouseDown():\n\t$0'
+  'OnMouseDrag':
+    'prefix': 'omd'
+    'body': 'def OnMouseDrag():\n\t$0'
+  'OnMouseEnter':
+    'prefix': 'ome'
+    'body': 'def OnMouseEnter():\n\t$0'
+  'OnNetworkInstantiate':
+    'prefix': 'oni'
+    'body': 'def OnNetworkInstantiate():\n\t$0'
+  'Reset':
+    'prefix': 're'
+    'body': 'def Reset():\n\t$0'
+  'animation':
+    'prefix': 'an'
+    'body': 'animation$0'
+  'audio':
+    'prefix': 'au'
+    'body': 'audio$0'
+  'camera':
+    'prefix': 'ca'
+    'body': 'camera$0'
+  'light':
+    'prefix': 'li'
+    'body': 'light$0'
+  'renderer':
+    'prefix': 're'
+    'body': 'renderer$0'
+  'AddComponentMenu':
+    'prefix': 'menu'
+    'body': '[AddComponentMenu( "${1:$TM_SELECTED_TEXT}" )]$0'
+  'Awake':
+    'prefix': 'aw'
+    'body': 'def Awake():\n\t$0'
+  'Debug.Log':
+    'prefix': 'log'
+    'body': 'Debug.Log( $1 )$0'
+  'OnGUI':
+    'prefix': 'og'
+    'body': 'def OnGUI():\n\t$0'
+  'FixedUpdate':
+    'prefix': 'fup'
+    'body': 'def LateUpdate():\n\t$0'
+  'GetComponent':
+    'prefix': 'getc'
+    'body': 'GetComponent(${1:$TM_SELECTED_TEXT})$0'
+  'LateUpdate':
+    'prefix': 'lup'
+    'body': 'def LateUpdate():\n\t$0'
+  'Rect':
+    'prefix': 'rec'
+    'body': 'Rect( ${1:x}, ${2:y}, ${3:width}, ${4:height} )$0'
+  'RequireComponent':
+    'prefix': 'reqc'
+    'body': '[RequireComponent( ${1:$TM_SELECTED_TEXT} ]$0'
+  'Start':
+    'prefix': 'st'
+    'body': 'def Start():\n\t$0'
+  'Update':
+    'prefix': 'up'
+    'body': 'def Update():\n\t$0'
+  'Vector3':
+    'prefix': 'vec'
+    'body': 'Vector3( ${1:0}, ${2:0}, ${3:0} )$0'
+  'rigidbody':
+    'prefix': 'rb'
+    'body': 'rigidbody$0'
+  'transform':
+    'prefix': 't'
+    'body': 'transform$0'
+  'transform.eulerAngles':
+    'prefix': 'tang'
+    'body': 'transform.eulerAngles$0'
+  'transform.localPosition':
+    'prefix': 'tlpos'
+    'body': 'transform.localPosition$0'
+  'transform.position':
+    'prefix': 'tpos'
+    'body': 'transform.position$0'
