@@ -2,7 +2,7 @@
 
 This package adds **language support and syntax highlighting for [Stata](http://stata.com/) .do files** in the Open-Source, next generation [**Atom Text Editor**](https://github.com/atom/atom).
 
-![](redme-assets/snap1.png)
+![](http://i.imgur.com/Nnnp4Pr.png)
 
 About the author:
 <pre>
