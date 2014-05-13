@@ -15,7 +15,7 @@ Open a terminal and paste this line to install the language in one command:
 cd ~/.atom && wget https://github.com/rhoconlinux/language-do/archive/master.zip  && unzip master.zip && rm master.zip && cd language-do-master && mv language-do  ~/.atom/packages && rm -Rf ~/.atom/language-do-master && cd
 
 ```
-~(it might work in a mac too, cause is a bash script, but it wasn't tested)~
+^it might work in a mac too, cause is a bash script, but it wasn't tested^
 
 ### note:
 Obviously when the package is accepted you may find it through **apm**, and you will be able to install it with the following command:
