@@ -12,7 +12,7 @@ You have to download or clone this repository, extract the content and copy the 
 Open a terminal and paste this line to install the language in one command: 
 
 ```
-cd ~/.atom && wget https://github.com/rhoconlinux/language-do/archive/master.zip  && unzip master.zip && rm master.zip && cd language-do-master && mv language-do  ~/.atom/packages && rm -Rf ~/.atom/language-do-master && cd
+cd ~/.atom && wget https://github.com/rhoconlinux/language-do/archive/master.zip  && unzip master.zip && rm master.zip&& mv language-do-master  ~/.atom/packages/language-do && cd
 
 ```
 ^it might work in a mac too, cause this is a bash script, but it wasn't tested^
